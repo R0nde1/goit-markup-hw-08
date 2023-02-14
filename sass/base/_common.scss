@@ -1,7 +1,21 @@
 .container {
-    width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
+        // Phone screen
+        min-width: 320px;
+        max-width: 480px;
+        padding: 0 15px;
+        margin: 0 auto;
+        outline: 2px solid red;
+        outline-offset: -2px;
+
+        // Tablet screen
+        @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+            
+        }
+
+        // Desktop screen
+        @media screen and (min-width: 1200px) {
+            max-width: 1200px;
+        }  
 }
 
 body {
