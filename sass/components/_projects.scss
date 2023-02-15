@@ -67,7 +67,7 @@
   left: 0;
   transform: translateY(100%);
 
-  transition: transform $duration $cubic;
+  transition: transform $duration2 $cubic;
 
   .projects__link:hover &,
   .projects__link:focus & {

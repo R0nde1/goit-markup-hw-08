@@ -22,7 +22,7 @@
   margin-bottom: 10px;
   position: relative;
 
-  transition: border $duration $cubic, fill $duration $cubic;
+  transition: border $duration2 $cubic, fill $duration $cubic;
 
   &:focus-within .form__input {
   outline: none;
@@ -112,6 +112,8 @@
   background-size: contain;
   background-origin: border-box;
 }
+
+
 }
 
 .form__link {

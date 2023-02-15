@@ -71,12 +71,16 @@
   padding: 0;
   fill: #000000;
 
-  transition: fill $duration $cubic;
+  transition: fill $duration2 $cubic, border-color $duration $cubic;
+  
 
   &--accent:hover,
   &--accent:focus {
     fill: $accent-color;
+    border-color: $accent-color;
   }
+  
+
 }
 
 .backdrop.is-hidden {

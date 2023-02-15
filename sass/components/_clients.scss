@@ -29,7 +29,8 @@
 
   fill: $svg-start-color;
 
-  transition: fill $duration $cubic, border $duration $cubic;
+  transition: fill $cubic, border $duration $cubic;
+  transition-duration: $duration2;
 
   &:hover,
   &:focus {

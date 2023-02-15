@@ -1,42 +1,27 @@
-/* text 2 #757575 */
-/* text 1 #212121 */
-/* button #2196F3 */
-/* text 3 #ffffff */
-/* background 1 #ffffff */
-/* background 2 #F5F4FA */
-/* background 3 #2F303A */
-/* icon primary #AFB1B8 */
+// UTILS //
+@import "./utils/variables";
+@import "./utils/reset";
+@import "./utils/mixin";
+@import "./utils/break-points";
 
-@import './utils/variables';
-@import './utils/visuall-hidden';
+// BASE //
+@import "./base/body";
+@import "./base/container-section";
 
-@import './base/normalize';
-@import './base/reset';
-@import './base/common';
+@import "./components/header";
+@import "./components/header-logo";
+@import "./components/mobile-menu";
 
-@import './components/header';
-@import './components/modal';
-@import './components/hero';
-@import './components/peculiarities';
-@import './components/team';
-@import './components/wdwd';
-@import './components/clients';
-@import './components/footer';
-@import './components/portfolio';
-
-/* Head */
-
-/* Button */
-
-/* Peculiarities */
-
-/* What-do-we-do */
-
-/* Our-team */
-
-/* Regular Clients */
-
-/* Footer */
-
-/* portfolio */
-
+// COMPONENTS //
+@import "./components/hero";
+@import "./components/features";
+@import "./components/examples";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/footer-logo";
+@import "./components/footer__form";
+@import "./components/modal";
+@import "./components/modal-form";
+@import "./components/filter";
+@import "./components/projects";
