@@ -1,192 +1,86 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--backdrop-idx);
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(1px);
-    transition: opacity 250ms, visibility 250ms;
-}
+  position: fixed;
+  top: 0;
+  left: 0;
 
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity $duration $cubic, visibility $duration $cubic;
+  padding: 93px 15px;
 }
 
 .backdrop.is-hidden .modal {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-70%);
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform $duration $cubic;
 }
 
 .modal {
+  width: 100%;
+
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 4px;
+
+  opacity: 1;
+  transition: opacity $duration $cubic, translate $duration $cubic,
+    transform $duration $cubic;
+
+  @media screen and (max-width: 767px) {
+    max-width: 450px;
+
+    position: relative;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 450px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 528px;
-
-    padding: 40px;
-    background-color: var(--primary-bg-color);
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    transition: opacity 150ms ease 400ms, transform 150ms ease 400ms;
-}
-
-.modal-title {
-    display: block;
-    margin-bottom: 12px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: calc(23/20);
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-}
-
-.modal-form-label {
-    text-align: left;
-    display: block;
-    margin-bottom: 6px;
-    font-size: 12px;
-}
-
-.modal-form-group {
-    position: relative;
-    margin-bottom: 28px;
-}
-
-.modal-form-field {
-    display: block;
-    width: 100%;
-    height: 40px;
-    padding: 12px 42px;
-
-    border-radius: 4px;
-    outline: transparent;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:focus {
-            border-color: var(--accent);
-        }
-}
-
-.modal-form-field:focus+.modal-form-icon {
-    fill: var(--accent);
-}
-
-.modal-form-icon {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
     position: absolute;
     top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    fill: var(--icon-secondary-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:focus {
-            fill: var(--accent);
-        }
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
-.modal-form-comment {
-    width: 100%;
-    height: 120px;
-    resize: none;
-    border-radius: 4px;
-    padding: 12px 16px;
-        margin-bottom: 20px;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: calc(14/12);
-        letter-spacing: 0.01em;
-        transition: background-color 250ms linear color rgba(117, 117, 117, 0.5);
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    outline: transparent;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: var(--accent);
-    &:focus {
-        border-color: var(--accent);
-    }
-    &:focus {
-    border-color: var(--accent);
-    }
+.modal__btn {
+  @include centeredFlex;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $primary-white-color;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  padding: 0;
+  fill: #000000;
+
+  transition: fill $duration $cubic;
+
+  &--accent:hover,
+  &--accent:focus {
+    fill: $accent-color;
+  }
 }
 
-.modal-form-comment::placeholder {
-    color: var(--primary-text-color);
-}
-
-.close-modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: var(--title-text-color);
-    border: 1px solid var(--icon-primary-color);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: transparent;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: var(--accent);
-    &:hover,
-    &:focus {
-        border-color: var(--accent);
-    }
-    &:hover .modal-cross,
-    &:focus .modal-cross {
-        fill: var(--accent);
-    }
-}
-
-.modal-cross {
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: var(--accent);
-    &:hover {
-        fill: var(--accent);
-    }
-}
-
-.check-accept {
-    gap: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.check-input {
-    appearance: none;
-    width: 16px;
-    height: 15px;
-    border-radius: 2px;
-    border: 1px solid var(--icon-secondary-color);
-    cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: center;
-    &:checked {
-            background-color: var(--accent);
-            border-color: var(--accent);
-        }
-}
-
-.agreement {
-    font-size: 14px;
-    line-height: calc(24/14);
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
-}
-
-.agreement-link {
-    text-decoration: underline;
-    color: var(--accent);
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }

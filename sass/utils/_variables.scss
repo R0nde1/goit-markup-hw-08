@@ -1,13 +1,15 @@
-:root {
-    --primary-text-color: #757575;
-    --title-text-color: #212121;
-    --accent: #2196F3;
-    --primary-bg-color: #ffffff;
-    --secondary-button-color: #F5F4FA;
-    --secondary-bg-color: #F5F4FA;
-    --wh-text-color: #ffffff;
-    --tertiary-bg-color: #2F303A;
-    --icon-primary-color: #AFB1B8;
-    --icon-secondary-color: #212121;
-    --backdrop-idx: 100;
-}
+ $primary-text-color: #757575;
+  $title-text-color: #212121;
+  $accent-color: #2196f3;
+  $button-hover: #188ce8;
+  $primary-white-color: #ffffff;
+  $footer-color: #2f303a;
+  $link-footer-color: rgba(255, 255, 255, 0.6);
+  $background-color: #f5f4fa;
+  $svg-start-color: #afb1b8;
+
+  $box-shadow: 0px 4px 4px 0px #00000040;
+
+
+ $cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  $duration: 250ms;
