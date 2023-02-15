@@ -1,70 +1,21 @@
 
 
 .our-peculiarities-container {
-    // phone
-    @media screen and (min-width: 320px) {
-     max-width: 480px;
-    margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+@media screen and (min-width: 1200px) {
+        padding-bottom: 0px;
     }
-
-    // tablet
-
-@media screen and (min-width: 768px) {
-    max-width: 767px;
-    margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 60px; 
-}
-
-    // desctop
-
-@media screen and (min-width: 1200px) { 
-    max-width: 1200px;       
-    margin: 0 auto;
-    padding-top: 94px;
-    padding-bottom: 94px;    
-}
 }
 
 .our-peculiarities-vector-container {
+    @include centeredFlex;
     
-      // phone
-
-@media screen and (min-width: 320px){
-    width: 450px;
-    height: 120px;
-    background-color: var(--secondary-bg-color);
-        border-radius: 4px;
-        display: flex;
-            align-items: center;
-            justify-content: center;
-    
-}
-
-        // tablet
-
-@media screen and (min-width: 768px){
-    width: 354px;
         height: 120px;
-        background-color: var(--secondary-bg-color);
-        border-radius: 4px;
-        display: flex;
-            align-items: center;
-            justify-content: center;
-
-}
     
-        // desctop
-        @media screen and (min-width: 1200px){
-            height: 120px;
-            background-color: var(--secondary-bg-color);
-            border-radius: 4px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;}
+        background-color: $background-color;
+        margin-bottom: 30px;
+    
+        border-radius: 4px;
+
 
 }
 
@@ -91,67 +42,49 @@
 
 .our-peculiarities-list {
 
-    // phone
-    
-        @media screen and (min-width: 320px){
+    @media screen and (min-width: 768px) {
             display: flex;
-                width: 270px;
+            flex-wrap: wrap;
         }
+                margin-top: 30px;
+                margin-left: 30px;
         
-        // tablet
-    
-        @media screen and (min-width: 768px){
-            display: flex;
-                width: 354px;
-        }
+                @media screen and (max-width: 767px) {
+                    margin-top: 0;
+                    margin-left: 0;
+                    max-width: 450px;
         
-        // desctop
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                }
+        
+                @media screen and (min-width: 768px) {
+                    flex-basis: calc(100% / 2 - 30px);
+                }
+        
+                @media screen and (min-width: 1200px) {
+                    flex-basis: calc(100% / 4 - 30px);
+                }
 
-        @media screen and (min-width: 1200px){
-            display: flex;
-            width: 270px;
-            gap: 30px;
-            color: var(--primary-text-color);}
+    
   }
 
 .our-peculiarities-header {
 
-    // phone
+    text-align: center;
     
-        @media screen and (min-width: 320px){
-            font-weight: 700;
-                font-size: 14px;
-                line-height: 1.2;
-                letter-spacing: 0.03em;
-                text-transform: uppercase;
-                padding-bottom: 10px;
-                color: var(--title-text-color);
-            }
-        
-        
-        // tablet
+        margin-bottom: 10px;
     
-        @media screen and (min-width: 768px){
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 1.2;
-            letter-spacing: 0.03em;
-                text-transform: uppercase;
-                padding-bottom: 10px;
-                color: var(--title-text-color);            
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+    
+        color: $title-text-color;
+    
+        @media screen and (min-width: 768px) {
+            text-align: left;
         }
-        
-        // desctop
-
-        @media screen and (min-width: 1200px){
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 1.2;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            padding-bottom: 10px;
-            color: var(--title-text-color);  
-        } 
 }
 
 .peculiarities-primary-text {
