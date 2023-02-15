@@ -76,15 +76,19 @@ header {
 .contacts__link {
   display: flex;
   align-items: center;
-  padding: 32px 0px;
+  
 
   @media screen and (min-width: 1200px) {
     @include centeredFlex;
+    padding: 32px 0px;
   }
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     font-size: 12px;
-    
+    &:not(:last-child) {
+      margin-bottom: 10px; 
+    }   
   }
+
   color: $primary-text-color;
   fill: $primary-text-color;
 }

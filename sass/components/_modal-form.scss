@@ -23,7 +23,7 @@
   position: relative;
 
   transition: border $duration2 $cubic, fill $duration $cubic;
-  
+
 
   &:focus-within .form__input {
   outline: none;
@@ -43,6 +43,7 @@
   border-radius: 4px;
   padding: 11px 12px;
   padding-left: 40px;
+  transition: $duration $cubic;
 }
 
 .form__icon {
@@ -51,6 +52,7 @@
   left: 11px;
   justify-content: center;
   align-items: center;
+  transition: $duration $cubic;
 }
 
 .comment {
@@ -58,6 +60,7 @@
   border: 1px solid #21212133;
   border-radius: 4px;
   height: 120px;
+  transition: $duration $cubic;
 
   &::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -95,6 +98,8 @@
 
   border-radius: 4px;
   border: 2px solid $title-text-color;
+ transition: outline-color $accent-color 
+
 
 }
 
@@ -113,6 +118,7 @@
   background-size: contain;
   background-origin: border-box;
 }
+
 
 
 }
