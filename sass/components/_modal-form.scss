@@ -23,6 +23,7 @@
   position: relative;
 
   transition: border $duration2 $cubic, fill $duration $cubic;
+  
 
   &:focus-within .form__input {
   outline: none;

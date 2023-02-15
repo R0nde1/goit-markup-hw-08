@@ -71,7 +71,8 @@
   padding: 0;
   fill: #000000;
 
-  transition: fill $duration2 $cubic, border-color $duration $cubic;
+  transition: fill $duration2 $cubic, border $duration $cubic;
+ 
   
 
   &--accent:hover,

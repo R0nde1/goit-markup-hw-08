@@ -41,12 +41,12 @@
 
     padding: 48px 40px;
 
-    transform: translateX(100%);
+    transform: translateX(-100%);
 
     transition: transform $duration $cubic;
 
     &.is-open {
-      transform: translateX(0);
+      transform: translateX(0%);
     }
   }
 }
