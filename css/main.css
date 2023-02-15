@@ -1099,7 +1099,7 @@ header {
 }
 @media screen and (max-width: 767px) {
   .modal {
-    max-width: 450px;
+    width: 100%;
     position: relative;
   }
 }

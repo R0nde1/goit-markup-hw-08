@@ -34,7 +34,7 @@
     transform $duration $cubic;
 
   @media screen and (max-width: 767px) {
-    max-width: 450px;
+    width: 100%;
 
     position: relative;
   }

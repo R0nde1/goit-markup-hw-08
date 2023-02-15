@@ -50,7 +50,15 @@
                         +38 096 111 11 11</a>
                 </li>
             </ul>
+
+            <button class="burger js-open-menu" type="button">
+                <svg class="burger--icon" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-burger"></use>
+                </svg>
+            </button>
         </div>
+
+
 
         <!-- <button class="burger" type="button" data-menu-button>
             <svg class="burger--icon" width="40" height="40">
@@ -64,56 +72,7 @@
                 </svg>
             </button> -->
 
-        <button class="burger js-open-menu" type="button">
-            <svg class="burger--icon" width="40" height="40">
-                <use href="./images/sprite.svg#icon-burger"></use>
-            </svg>
-        </button>
-        <div class="mobile-menu js-menu-container">
 
-            <button class="mobile--close js-close-menu" type="button">
-                <svg width="40" height="40">
-                    <use href="./images/sprite.svg#icon-close-black"></use>
-                </svg>
-            </button>
-
-
-
-            <nav class="mobile__site-nav">
-                <ul class="mobile-nav">
-                    <li class="mobile-nav__item">
-                        <a class="mobile-nav__link" href="./index.html">Студія</a>
-                    </li>
-                    <li class="mobile-nav__item">
-                        <a class="mobile-nav__link mobile-nav__link--current" href="./portfolio.html">Портфоліо</a>
-                    </li>
-                    <li class="mobile-nav__item"><a class="mobile-nav__link" href="/">Контакти</a></li>
-                </ul>
-            </nav>
-
-            <div>
-                <ul class="mobile-contacts">
-                    <li class="mobile-contacts__item">
-                        <a class="mobile-contacts__link mobile-contacts__link--accent" href="tel:+380961111111">
-                            +38 096 111 11 11</a>
-                    </li>
-
-                    <li class="mobile-contacts__item">
-                        <a class="mobile-contacts__link" href="mailto:info@devstudio.com">
-                            info@devstudio.com</a>
-                    </li>
-                </ul>
-
-                <ul class="social-mobile">
-                    <li class="social-mobile__item">
-                        <a class="social-mobile__link" href="">Instagram</a>
-                    </li>
-                    <li class="social-mobile__item"><a class="social-mobile__link" href="">Twitter</a></li>
-                    <li class="social-mobile__item"><a class="social-mobile__link" href="">Facebook</a></li>
-                    <li class="social-mobile__item"><a class="social-mobile__link" href="">LinkedIn</a></li>
-                </ul>
-            </div>
-        </div>
     </header>
 
     <main>
@@ -151,7 +110,7 @@
 
                                     <source srcset="./images/techno-mobile.jpg 1x, ./images/techno-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Технокряк">
+                                    <img src="./images/techno-mobile.jpg 1x" alt="Технокряк">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -178,7 +137,7 @@
 
                                     <source srcset="./images/basket-mobile.jpg 1x, ./images/basket-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Дизайн">
+                                    <img src="./images/basket-mobile.jpg 1x" alt="Дизайн">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -204,7 +163,7 @@
 
                                     <source srcset="./images/fish-mobile.jpg 1x, ./images/fish-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Додаток">
+                                    <img src="./images/fish-mobile.jpg 1x" alt="Додаток">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -234,7 +193,7 @@
                                     <source
                                         srcset="./images/headphones-mobile.jpg 1x, ./images/headphones-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Маркетинг">
+                                    <img src="./images/headphones-mobile.jpg 1x" alt="Маркетинг">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -261,7 +220,7 @@
 
                                     <source srcset="./images/boxes-mobile.jpg 1x, ./images/boxes-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Додаток">
+                                    <img src="./images/boxes-mobile.jpg 1x" alt="Додаток">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -288,7 +247,7 @@
 
                                     <source srcset="./images/monitor-mobile.jpg 1x, ./images/monitor-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Веб-сайт">
+                                    <img src="./images/monitor-mobile.jpg 1x" alt="Веб-сайт">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -315,7 +274,7 @@
 
                                     <source srcset="./images/magazine-mobile.jpg 1x, ./images/magazine-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Дизайн">
+                                    <img src="./images/magazine-mobile.jpg 1x" alt="Дизайн">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -342,7 +301,7 @@
 
                                     <source srcset="./images/lab-mobile.jpg 1x, ./images/lab-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Маркетинг">
+                                    <img src="./images/lab-mobile.jpg 1x" alt="Маркетинг">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -369,7 +328,7 @@
 
                                     <source srcset="./images/business-mobile.jpg 1x, ./images/business-mobile2x.jpg 2x">
 
-                                    <img src="#" alt="Приложение">
+                                    <img src="./images/business-mobile.jpg 1x" alt="Приложение">
                                 </picture>
 
                                 <p class="projects__overlay">
@@ -464,6 +423,55 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile menu -->
+
+
+    <div class="mobile-menu js-menu-container">
+
+        <button class="mobile--close js-close-menu" type="button">
+            <svg width="40" height="40">
+                <use href="./images/sprite.svg#icon-close-black"></use>
+            </svg>
+        </button>
+
+
+
+        <nav class="mobile__site-nav">
+            <ul class="mobile-nav">
+                <li class="mobile-nav__item">
+                    <a class="mobile-nav__link" href="./index.html">Студія</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a class="mobile-nav__link mobile-nav__link--current" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="/">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <ul class="mobile-contacts">
+                <li class="mobile-contacts__item">
+                    <a class="mobile-contacts__link mobile-contacts__link--accent" href="tel:+380961111111">
+                        +38 096 111 11 11</a>
+                </li>
+
+                <li class="mobile-contacts__item">
+                    <a class="mobile-contacts__link" href="mailto:info@devstudio.com">
+                        info@devstudio.com</a>
+                </li>
+            </ul>
+
+            <ul class="social-mobile">
+                <li class="social-mobile__item">
+                    <a class="social-mobile__link" href="">Instagram</a>
+                </li>
+                <li class="social-mobile__item"><a class="social-mobile__link" href="">Twitter</a></li>
+                <li class="social-mobile__item"><a class="social-mobile__link" href="">Facebook</a></li>
+                <li class="social-mobile__item"><a class="social-mobile__link" href="">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
 
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
